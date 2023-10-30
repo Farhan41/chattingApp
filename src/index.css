@@ -1,0 +1,97 @@
+*{
+margin: 0;
+padding: 0;
+}
+
+.Link{
+text-decoration: none;
+
+}
+
+.registration{
+display: flex;
+font-family: 'Nunito', sans-serif;
+font-size: small;
+}
+
+.registration h2{
+font-family: 'Nunito', sans-serif;
+font-weight: bold;
+font-size: 34px;
+}
+
+.registration p{
+font-family: 'Nunito', sans-serif;
+font-weight: normal;
+font-size: 20px;
+color: gray;
+}
+
+.registration .left{
+width: 50%;
+height: 100vh;
+display: flex;
+justify-content: end;
+}
+
+.registration .right{
+width: 50%;
+height: 100vh;
+}
+
+.registration .bg{
+width:100%;
+height: 100%;
+object-fit: cover;
+}
+
+.registration .left .text-container{
+width: 80%;
+margin-top: 100px;
+}
+
+.inputCss{
+width:90%;
+margin: 15px 0 !important;
+margin-top: 20px !important;
+}
+
+.regbtn{
+width: 90%;
+padding: 15px 0 !important;
+border-radius: 50px !important;
+background: blue !important;
+color: white !important;
+margin-top: 10px !important;
+}
+
+.regbtnd{
+    width: 90%;
+    padding: 15px 0 !important;
+    border-radius: 50px !important;
+    margin-top: 10px !important;
+    }
+
+.box{
+max-width: 350px;
+}
+
+.focus{
+
+font-size: 18px !important;
+font-weight: bold;
+color: orange !important;
+margin-top: 20px !important;
+color: black !important;
+
+}
+
+.eye{
+position: relative;
+top: 42px;
+right: 30px;
+}
+
+.alert{
+    width: 82%;
+}
