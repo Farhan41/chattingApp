@@ -74,6 +74,7 @@ margin-top: 10px !important;
 
 .box{
 max-width: 350px;
+margin-top: 20px;
 }
 
 .focus{
@@ -95,3 +96,63 @@ right: 30px;
 .alert{
     width: 82%;
 }
+
+.forgotpage{
+    background: orange;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.forgotbox{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.regbtntwo{
+    width: 90%;
+    padding: 15px 0 !important;
+    border-radius: 50px !important;
+    background: white !important;
+    color: black !important;
+    margin-top: 10px !important;
+    border: 1px solid black !important;
+}
+
+.google {
+    position: absolute;
+    top: 19px;
+    left: 28px;
+    font-size: 35px;
+}
+
+.relative{
+    position: relative;
+}
+
+/* @media only screen and (max-width: 600px) {
+    .registration .left {
+        display: flex;
+        justify-content: center;
+    }
+    .registration .left .text-container {
+        margin-top: 50px;
+    }
+    .registration h2 {
+        font-size: 20px;
+    }
+    .registration p {
+        font-size: 14px;
+    }
+    .regbtn {
+        width: 70%;
+        padding: 9px 0 !important;
+    }
+    .focus {
+        font-size: 10px !important;
+    }
+} */
+
+

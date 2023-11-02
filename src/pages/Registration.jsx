@@ -15,6 +15,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const Registration = () => {
 
   const auth = getAuth();
+ 
   
 
   // let [fullname, setFullname] = useState("")
@@ -64,6 +65,8 @@ const Registration = () => {
   //     setOpen(true)
   //   }
   // }
+
+
 
   let handleRegistration = () =>{
 
@@ -129,7 +132,7 @@ const Registration = () => {
       const errorCode = error.code;
       const errorMessage = error.message;
       if(errorCode.includes("email")){
-        toast.error('Email already exist...', {
+        toast.error('Email already exist or you must complete the registration form', {
           position: "bottom-left",
           autoClose: 5000,
           hideProgressBar: false,
@@ -145,15 +148,21 @@ const Registration = () => {
 
   }
 
+  
+
 
 
   return (
     <div className='registration'>
         <div className='left'>
             <div className='text-container'>
+            
             <h2>Get started with easily register</h2>
             <p>Free register and you can enjoy it</p>
             <div className='box'>
+
+           
+
             <TextField onChange={handleChange} name='fullname' className='inputCss' type="text" id="outlined-basic" label="Full Name" variant="outlined" value={formData.fullname} />  
             {
               fullnameError &&

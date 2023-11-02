@@ -5,13 +5,15 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { Link, useNavigate } from 'react-router-dom';
 import Alert from '@mui/material/Alert';
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
+import {FcGoogle} from "react-icons/fc"
 
 const Login = () => {
 
   const auth = getAuth();
+  const provider = new GoogleAuthProvider();
   
   let navigate = useNavigate();
 
@@ -65,6 +67,14 @@ const Login = () => {
     });
   }
 
+  let handleGoogle =()=>{
+    signInWithPopup(auth, provider)
+  .then(() => {
+    navigate("/home")
+  })
+
+  }
+
     
 
   return (
@@ -74,6 +84,11 @@ const Login = () => {
         <h2>Login to your account</h2>
         
         <div className='box'>
+
+        <div className='relative'>
+        <Button onClick={handleGoogle} className="regbtntwo" Varient="contained">Continue with Google</Button>
+        <FcGoogle className="google"/>
+        </div>
         <TextField onChange={handleChange} name='email' className='inputCss' type="Email" id="standard-basic" label="Email Address" variant="standard" />
         {/* <Alert severity="error">Invalid email error!</Alert> */}
         <TextField onChange={handleChange} name='password' className='inputCss' type="password" id="standard-basic" label="Password" variant="standard" />
@@ -81,6 +96,7 @@ const Login = () => {
         <Button onClick={handleLogin} className="regbtn" Varient="contained">Login to continue</Button>
 
         <p className='focus'> Don't have an account? <Link className='Link' to="/">Sign Up</Link></p>
+        <p className='focus'> Forget password? <Link className='Link' to="/forgotpassword"> Click Here </Link></p>
         
         </div>
   
