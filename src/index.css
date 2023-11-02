@@ -132,7 +132,7 @@ right: 30px;
     position: relative;
 }
 
-/* @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
     .registration .left {
         display: flex;
         justify-content: center;
@@ -148,11 +148,56 @@ right: 30px;
     }
     .regbtn {
         width: 70%;
-        padding: 9px 0 !important;
+        padding: 9px 2px !important;
+        font-size: 8px !important;
     }
     .focus {
-        font-size: 10px !important;
+        font-size: 14px !important;
+        max-width: 106px;
+        margin-top: 8px !important;
     }
-} */
+
+    .registration .bg{
+        width:100%;
+        height: 100%;
+        
+        }
+
+        .inputCss {
+            width: 80%;
+            margin: 0px 0 !important;
+            margin-top: 3px !important;
+        }
+
+        .eye {
+            position: relative;
+            top: 23px;
+            right: 18px;
+        }
+
+        .google {
+            position: absolute;
+            top: 22px;
+            left: 13px;
+            font-size: 16px;
+        }
+
+        .regbtntwo {
+            width: 90%;
+            padding: 15px 0 !important;
+            border-radius: 50px !important;
+            background: white !important;
+            color: black !important;
+            margin-top: 10px !important;
+            border: 1px solid black !important;
+            font-size: 6px !important;
+            padding-left: 10px !important;
+        }
+
+        .box {
+            max-width: 350px;
+            margin-top: 0px;
+        }
+}
 
 
