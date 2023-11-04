@@ -9,6 +9,8 @@ import { getAuth, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvide
 import { useState } from 'react';
 import { toast } from 'react-toastify';
 import {FcGoogle} from "react-icons/fc"
+import { loggedUser } from '../slices/userSlice';
+import { useDispatch } from 'react-redux';
 
 const Login = () => {
 
@@ -16,6 +18,7 @@ const Login = () => {
   const provider = new GoogleAuthProvider();
   
   let navigate = useNavigate();
+  let dispatch = useDispatch();
 
   let [formData, setFormData] = useState({
     email: "",
@@ -36,6 +39,7 @@ const Login = () => {
       console.log(user)
       if(user.user.emailVerified){
         navigate("/home")
+        dispatch(loggedUser(user.user))
       }else{
         toast.error('To Login, Please verify your email...', {
           position: "bottom-left",
@@ -69,8 +73,9 @@ const Login = () => {
 
   let handleGoogle =()=>{
     signInWithPopup(auth, provider)
-  .then(() => {
+  .then((user) => {
     navigate("/home")
+    dispatch(loggedUser(user.user))
   })
 
   }
